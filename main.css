@@ -1,0 +1,84 @@
+body,
+#queue,
+#ground {
+    position: relative;
+}
+body {
+    margin: 0px;
+}
+#ground {
+    background-color: rgb(185,52,14);
+    width: 100%;
+    height: 300px;
+    top: 300px;
+    z-index: 1;
+}
+#shadow, .shape, #circle, #hand-container {
+    animation-direction: alternate;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    position: absolute;
+    left: 500px;
+}
+#shadow {
+    animation-name: growShadow;
+    background-color: rgb(124, 52, 28);
+    border-radius: 50%;
+    height: 20px;
+    width: 50px;
+    top: 525px;
+    z-index: 50;
+}
+.shape {
+    height: 50px;
+    width: 50px;    
+    z-index: 1000;  
+}
+.shapelabel {
+    color: white;
+    font-family: 'Ultra', serif; 
+    font-size: 8px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20px;
+    color: rgb(29, 39, 5);
+}
+#circle {
+    animation-name: bounceBall;
+    background-color: rgb(222,244, 54);
+    border-radius: 50%; 
+    top: 160px;
+}
+@keyframes growShadow {
+    0% {
+        transform: scale(0.25, 0.8);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+@keyframes bounceBall {
+    0% {
+        top: 160px;
+        left: 500px;
+        transform: scaleY(1.0); 
+        border-radius: 50%      
+    }
+
+    90% {
+        top: 480px;
+        transform: scaleY(1.0);
+        border-radius: 50%      
+    }
+
+    100% {
+        top: 500px;
+        left: 500px;
+        transform: scaleY(0.5);
+        border-bottom-right-radius: 25%;
+        border-bottom-left-radius: 25%;
+    }
+}
