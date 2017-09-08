@@ -5,9 +5,16 @@ body,
 }
 body {
     margin: 0px;
+    background-color: rgb(185,52,14);
+}
+#sky {
+    background-color: #ffffff;
+    width: 100%;
+    height: 400px;
+    top: 0px;
+    z-index: 2;
 }
 #ground {
-    background-color: rgb(185,52,14);
     width: 100%;
     height: 300px;
     top: 300px;
